@@ -39,6 +39,21 @@
         const axisHelper = new THREE.AxisHelper(1000); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
+
+        var c1 = Math.floor(Math.random() * (2))*15;
+        var c2=Math.floor(Math.random() * (2))*15;
+        var c3=Math.floor(Math.random() * (2))*15;
+        var c4 = Math.floor(Math.random() * (2))*15;
+        var c5=Math.floor(Math.random() * (2))*15;
+        var c6=Math.floor(Math.random() * (2))*15;
+        var c116=c1.toString(16);
+        var c216=c2.toString(16);
+        var c316=c3.toString(16);
+        var c416=c4.toString(16);
+        var c516=c5.toString(16);
+        var c616=c6.toString(16);
+        var a="0x"+c116+c216+c316+c416+c516+c616;
+        
         // グループを作成
         const group = new THREE.Group();
         scene.add(group);
@@ -47,19 +62,7 @@
         //const material = new THREE.MeshStandardMaterial();
         const material=new THREE.MeshLambertMaterial({ color:a});
 
-        var c1 = Math.floor(Math.random() * (2))*15;
-          var c2=Math.floor(Math.random() * (2))*15;
-          var c3=Math.floor(Math.random() * (2))*15;
-          var c4 = Math.floor(Math.random() * (2))*15;
-          var c5=Math.floor(Math.random() * (2))*15;
-          var c6=Math.floor(Math.random() * (2))*15;
-          var c116=c1.toString(16);
-          var c216=c2.toString(16);
-          var c316=c3.toString(16);
-          var c416=c4.toString(16);
-          var c516=c5.toString(16);
-          var c616=c6.toString(16);
-          var a="0x"+c116+c216+c316+c416+c516+c616;
+
 
         for (let i = 0; i < 1000; i++) {
           

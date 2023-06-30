@@ -47,13 +47,19 @@
         //const material = new THREE.MeshStandardMaterial();
 
         for (let i = 0; i < 1000; i++) {
-          var co = Math.floor(Math.random() * (255));
-          var lo=Math.floor(Math.random() * (255));
-          var r=Math.floor(Math.random() * (255));
-          var co16=co.toString(16);
-          var lo16=lo.toString(16);
-          var r16=r.toString(16);
-          var a="0x"+co16+lo16+r16;
+          var c1 = Math.floor(Math.random() * (15));
+          var c2=Math.floor(Math.random() * (15));
+          var c3=Math.floor(Math.random() * (15));
+          var c4 = Math.floor(Math.random() * (15));
+          var c5=Math.floor(Math.random() * (15));
+          var c6=Math.floor(Math.random() * (15));
+          var c116=c1.toString(16);
+          var c216=c2.toString(16);
+          var c316=c3.toString(16);
+          var c416=c4.toString(16);
+          var c516=c5.toString(16);
+          var c616=c6.toString(16);
+          var a="0x"+c116+c216+c316+c416+c516+c616;
           
           const mesh = new THREE.Mesh(geometry,new THREE.MeshLambertMaterial({ color:a}));
           mesh.position.x = (Math.random() - 0.5) * 2000;

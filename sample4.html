@@ -45,6 +45,7 @@
         const geometry = new THREE.BoxGeometry(50, 50, 50);
         //const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
         //const material = new THREE.MeshStandardMaterial();
+        const material=new THREE.MeshLambertMaterial({ color:a})
 
         var c1 = Math.floor(Math.random() * (2))*15;
           var c2=Math.floor(Math.random() * (2))*15;
@@ -63,7 +64,7 @@
         for (let i = 0; i < 1000; i++) {
           
           
-          const mesh = new THREE.Mesh(geometry,new THREE.MeshLambertMaterial({ color:a}));
+          const mesh = new THREE.Mesh(geometry,material);
           mesh.position.x = (Math.random() - 0.5) * 2000;
           mesh.position.y = (Math.random() - 0.5) * 2000;
           mesh.position.z = (Math.random() - 0.5) * 2000;

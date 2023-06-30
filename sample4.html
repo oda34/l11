@@ -44,10 +44,18 @@
         scene.add(group);
         const geometry = new THREE.BoxGeometry(50, 50, 50);
         //const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
-        const material = new THREE.MeshStandardMaterial();
+        //const material = new THREE.MeshStandardMaterial();
 
         for (let i = 0; i < 1000; i++) {
-          const mesh = new THREE.Mesh(geometry, material);
+          let x="0f";
+          var co = Math.floor(Math.random() * (255));
+          var lo=Math.floor(Math.random() * (255));
+          var r=Math.floor(Math.random() * (255));
+          var co16=co.toString(16);
+          var lo16=co.toString(16);
+          var r16=co.toString(16);
+          
+          const mesh = new THREE.Mesh(geometry,new THREE.MeshLambertMaterial( { color: "0f"+co16+lo16+r16 });
           mesh.position.x = (Math.random() - 0.5) * 2000;
           mesh.position.y = (Math.random() - 0.5) * 2000;
           mesh.position.z = (Math.random() - 0.5) * 2000;

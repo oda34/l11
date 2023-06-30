@@ -52,10 +52,11 @@
           var lo=Math.floor(Math.random() * (255));
           var r=Math.floor(Math.random() * (255));
           var co16=co.toString(16);
-          var lo16=co.toString(16);
-          var r16=co.toString(16);
+          var lo16=lo.toString(16);
+          var r16=r.toString(16);
+          const a="0f"+co16+lo16+r16;
           
-          const mesh = new THREE.Mesh(geometry,new THREE.MeshLambertMaterial( { color: "0f"+co16+lo16+r16 });
+          const mesh = new THREE.Mesh(geometry,new THREE.MeshLambertMaterial( { color:a  });
           mesh.position.x = (Math.random() - 0.5) * 2000;
           mesh.position.y = (Math.random() - 0.5) * 2000;
           mesh.position.z = (Math.random() - 0.5) * 2000;

@@ -38,13 +38,6 @@
         scene.add(gridHelper);
         const axisHelper = new THREE.AxisHelper(1000); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
-
-
-        var r = Math.floor(Math.random() * 256);
-        var g = Math.floor(Math.random() * 256);
-        var b = Math.floor(Math.random() * 256);
-        var color = new THREE.Color(r / 255, g / 255, b / 255);
-        var material = new THREE.MeshLambertMaterial({ color: color });
         
         // グループを作成
         const group = new THREE.Group();
@@ -58,7 +51,11 @@
 
         for (let i = 0; i < 1000; i++) {
           
-          
+          var r = Math.floor(Math.random() * 256);
+          var g = Math.floor(Math.random() * 256);
+          var b = Math.floor(Math.random() * 256);
+          var color = new THREE.Color(r / 255, g / 255, b / 255);
+          var material = new THREE.MeshLambertMaterial({ color: color });
           const mesh = new THREE.Mesh(geometry,material);
           mesh.position.x = (Math.random() - 0.5) * 2000;
           mesh.position.y = (Math.random() - 0.5) * 2000;
